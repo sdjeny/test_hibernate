@@ -3,11 +3,10 @@
 	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
 
-	<persistence-unit name="persistence-unit_demo"
-		transaction-type="RESOURCE_LOCAL">
+	<persistence-unit name="persistence-unit_demo"><!--transaction-type="RESOURCE_LOCAL" -->
 		<!-- 配置使用什么ORM产品作为JPA的实现 1. 实际上配置的是接口javax.persistence.spi.PersistenceProvider的实现类 
 			2. 若项目只有一个实现产品时，可以不用配置 -->
-		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<!--provider>org.hibernate.ejb.HibernatePersistence</provider -->
 		<properties>
 			<!-- 连接数据库的基本信息 -->
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/test" />

@@ -32,13 +32,13 @@ public class PersonTest {
 		查();
 	}
 
-	@Test
+	//@Test
 	public void 查() {
 		EntityManager manager = factory.createEntityManager();
 		manager.getTransaction().begin();
 		// manager.persist(new Person("大天天"));
 		javax.persistence.Query query = manager.createQuery("FROM Person WHERE name=:name");
-		query.setParameter("name", "");
+		query.setParameter("name", "大天天");
 		List<Person> persons = query.getResultList();
 		for (Person person : persons) {
 			System.out.println(person.getId() + "	:	" + person.getName());
