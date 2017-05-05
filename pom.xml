@@ -38,6 +38,8 @@
 			<artifactId>hibernate-hikaricp</artifactId>
 			<version>${project.hibernate.version}</version>
 		</dependency>
+		<!--HikariCP connection pooling <dependency> <groupId>com.zaxxer</groupId> 
+			<artifactId>HikariCP</artifactId> <version>2.6.1</version> </dependency> -->
 		<!-- Mysql and MariaDB -->
 		<dependency>
 			<groupId>mysql</groupId>

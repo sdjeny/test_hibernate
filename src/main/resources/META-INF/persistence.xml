@@ -24,6 +24,11 @@
 				应用第一次运行起来后才会。 validate ： 每次加载hibernate时，验证创建数据库表结构，只会和数据库中的表进行比较，不会创建新表，但是会插入新值。 -->
 			<property name="hibernate.hbm2ddl.auto" value="update" />
 			<!-- hibernate.hbm2ddl.auto= create-drop / create / update -->
+			<!-- 线程池自定义配置 (使用hikari) -->
+			<property name="hibernate.hikari.dataSource.prepStmtCacheSize"
+				value="250" />
+			<property name="hibernate.hikari.dataSource.prepStmtCacheSqlLimit"
+				value="2048" />
 		</properties>
 	</persistence-unit>
 </persistence>  
